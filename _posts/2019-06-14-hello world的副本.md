@@ -1,0 +1,79 @@
+---
+layout:     post
+title:      RSS订阅地址传入解析
+subtitle:   hello world
+date:       2019-06-14
+author:     bbbing
+header-img: img/post-bg-coffee.jpg
+catalog: true
+tags:
+    - java
+---
+```java
+@Override
+    public Map<String, Object> getRssList(String url) throws Exception {
+        Map<String, Object> result = new HashMap<String,Object>(); 
+        List rssList = new ArrayList();
+        try{
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); //解析器工厂类
+            DocumentBuilder db;
+            Document doc;
+
+            //此DocumentBuilder对象的作用是根据xml文件的url地址生成document对象
+            db =dbf.newDocumentBuilder();     //得到一个DOM解析器对象;
+            //File file = new File("students.xml"); //当然，我们也可以读出本地计算机中的xml文档
+
+            //doc对象包含需要解析的feed的xml文件
+            URL file = new URL(url);
+
+            doc = db.parse(file.openStream());  //把解析后的XML，赋给文档对象;
+            //feed的xml文件的组成单位是item,从doc中取出所有的item
+            NodeList nl = doc.getElementsByTagName("item");  //多个<item>标签组成一个链表;
+
+            for(int i=0;i<nl.getLength();i++)
+            {
+                Element eltStu = (Element)nl.item(i);
+
+                //此处得到元素中的<title></title>标签实体；
+                Node titlenode = eltStu.getElementsByTagName("title").item(0);
+
+                //返回第一个节点的值;
+
+                String title = titlenode.getFirstChild().getNodeValue();
+
+                Node linknode = eltStu.getElementsByTagName("link").item(0);
+                String link = linknode.getFirstChild().getNodeValue();
+                
+                Node pubDate = eltStu.getElementsByTagName("pubDate").item(0);
+                String date = pubDate.getFirstChild().getNodeValue();
+
+                Node descriptionnode = eltStu.getElementsByTagName("description").item(0);
+//                String description = descriptionnode.getTextContent();
+                String description = descriptionnode.getFirstChild().getNodeValue();
+
+                Node authornode = eltStu.getElementsByTagName("author").item(0);
+                String author = authornode.getFirstChild().getNodeValue();
+                Map<String, Object> rss = new HashMap<String,Object>();  //声明一个结果集
+                rss.put("title",title);
+                rss.put("link",link);
+                rss.put("description",description);
+                rss.put("author",author);
+                rss.put("date",date);
+                rssList.add(rss);
+            }
+            result.put("count",nl.getLength());
+            result.put("rssList",rssList);
+            
+        }
+        catch(ParserConfigurationException e)
+        {
+            e.printStackTrace();
+        }catch(SAXException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }finally{
+        }
+        return result;
+    }
+```
