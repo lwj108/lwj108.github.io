@@ -1,6 +1,6 @@
 # Site settings
-title: BY Blog
-SEOTitle: 李维俊的博客 | BY Blog
+title: bbbing Blog
+SEOTitle: 李维俊的博客 | bbbing Blog
 header-img: img/post-bg-desk.jpg
 email: liweijun666@outlook.com
 description: "Every failure is leading towards success."
@@ -13,7 +13,6 @@ github_repo: "https://github.com/lwj108/lwj108.github.io.git" # you code reposit
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
 sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
 
 
 # SNS settings
