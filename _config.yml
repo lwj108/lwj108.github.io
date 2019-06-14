@@ -1,10 +1,10 @@
 # Site settings
-title: bbbing Blog
-SEOTitle: 李维俊的博客 | bbbing Blog
+title: lwj108 Blog
+SEOTitle: 李维俊的博客 | lwj108 Blog
 header-img: img/post-bg-desk.jpg
 email: liweijun666@outlook.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 李维俊的博客, 夏天的棒棒冰, java, MacBook Pro, iPhone, life"
+keyword: "lwj108, lwj108 Blog, 李维俊的博客, 夏天的棒棒冰, java, MacBook Pro, iPhone, life"
 url: "http://lwj108.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/lwj108/lwj108.github.io.git" # you code repository
