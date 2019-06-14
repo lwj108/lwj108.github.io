@@ -7,7 +7,7 @@ author:     BY
 header-img: img/post-bg-cook.jpg
 catalog: true
 tags:
-    - iOS
+    - 随笔
 ---
 
 ## hello liweijun
