@@ -4,7 +4,7 @@ title:      SpringMVC·form表单Date类型问题导致的400问题
 subtitle:   在实际工作中会经常遇到各种传值类型导致的问题，在此记录一个date类型问题。
 date:       2019-06-27
 author:     lwj108
-header-img: img/post-bg-coffee.jpeg
+header-img: img/post-bg-geek3.jpeg
 catalog: true
 tags:
     - java

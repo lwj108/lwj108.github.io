@@ -4,7 +4,7 @@ title:      hello world
 subtitle:   hello world
 date:       2019-06-01
 author:     lwj108
-header-img: img/post-bg-github-cup.jpg
+header-img: img/post-bg-desk.jpeg
 catalog: true
 tags:
     - 随笔
