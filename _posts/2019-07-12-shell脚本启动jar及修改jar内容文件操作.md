@@ -7,8 +7,7 @@ author:     lwj108
 header-img: img/post-bg-hacker.jpg
 catalog: true
 tags:
-    - java
-    - github
+    - linux
 ---
 ### 基本说明
 在Linux服务器下/opt/micro-service/目录放置各类微服务jar文件并创建config文件夹将config.properties放入其中，jar包启动时会去读取其中的配置文件，如果需要指定文件可以使用upstart命令进行操作。
